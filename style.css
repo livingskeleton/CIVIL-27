@@ -1,124 +1,121 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7d7be; /* This color is an approximation of the background in your image */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7d7be;
 }
 
+/* Header with logo and centered title */
 .header {
-    display: flex;
-    align-items: center;
-    padding: 20px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 20px;
 }
 
 .logo {
-    height: 140px; /* Adjust as needed */
-    margin-right: 20px;
+  height: 140px;
+  margin-right: 20px;
 }
 
 .heading {
-    font-size: 4em; /* Larger text */
-    color: #333;
-    margin: 0;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-    width: 100%;
-    pointer-events: none; /* So clicks go through it if needed */
+  font-size: 4em;
+  color: #333;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 100%;
+  pointer-events: none;
 }
 
+/* Content and scroll */
 .content {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center; /* Center the entire content block */
-    align-items: flex-start; /* Align content to the top within the center */
-    padding: 20px;
-    box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .scroll-container {
-    height: 75vh; /* Slightly increased height to show more names, adjust as needed */
-    overflow-y: auto;
-    border: none;
-    width: 96%; /* Keep it at 90% to allow for some side padding */
-    max-width: 1000px; /* Increased max-width to allow wider columns on larger screens */
-    padding: 15px 20px; /* Increased padding inside the scroll container (top/bottom, left/right) */
-    box-sizing: border-box;
-    /* Optional: Add a subtle border or shadow to make the scroll area stand out if desired */
-    /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
-    /* border-radius: 5px; */
+  height: 75vh;
+  overflow: hidden;
+  width: 96%;
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
 }
 
+.scroll-inner {
+  display: flex;
+  flex-direction: column;
+  animation: scroll-up 60s linear infinite;
+}
+
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.scroll-inner:hover {
+  animation-play-state: paused;
+}
+
+/* The list */
 .list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 1.6em;
-    color: #333;
-    font-family: 'Alumni Sans SC', sans-serif;
-    font-weight: 300; /* Light weight */
-    
-    column-width: 250px;
-    column-gap: 50px;
-    text-align: left;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 1.6em;
+  color: #333;
+  font-family: 'Alumni Sans SC', sans-serif;
+  font-weight: 300;
+
+  column-width: 250px;
+  column-gap: 50px;
+  text-align: left;
 }
+
 .list li {
-    padding: 6px 0; /* Increased vertical padding for more space between names */
-    margin-bottom: 4px; /* Increased margin between list items */
-    break-inside: avoid-column; /* Prevent list items from breaking across columns */
+  padding: 6px 0;
+  margin-bottom: 4px;
+  break-inside: avoid-column;
 }
 
-/* Media Queries for responsiveness */
-@media (max-width: 1024px) {
-    .list {
-        column-width: 220px; /* Adjust for medium screens */
-        column-gap: 40px;
-    }
-}
-
+/* Responsive */
 @media (max-width: 768px) {
-    .list {
-        column-width: 200px; /* Adjust for smaller tablets */
-        column-gap: 30px;
-    }
-    .heading {
-        font-size: 2.5em;
-    }
-    .logo {
-        height: 70px;
-    }
+  .heading {
+    font-size: 3em;
+  }
+  .logo {
+    height: 90px;
+  }
+  .list {
+    column-width: 200px;
+    column-gap: 30px;
+  }
 }
 
 @media (max-width: 480px) {
-    .heading {
-        font-size: 3.2em; /* Make it bigger than default mobile */
-    }
-    .logo {
-        height: 100px; /* Bigger logo for small screens */
-    }
-    .list {
-        column-count: 1; /* Force single column on very small screens for readability */
-        column-width: auto; /* Remove fixed width */
-        text-align: center; /* Center text in single column mode */
-    }
-    .scroll-container {
-        width: 95%;
-        padding: 10px; /* Reduce padding on very small screens */
-    }
-    .list li {
-        padding: 8px 0; /* Slightly more padding for single column on small screens */
-    }
-    .header {
-        padding: 15px;
-    }
-    .logo {
-        height: 50px;
-    }
-    .heading {
-        font-size: 1.8em;
-    }
+  .list {
+    column-count: 1;
+    column-width: auto;
+    text-align: center;
+  }
+  .scroll-container {
+    width: 95%;
+    padding: 10px;
+  }
+  .logo {
+    height: 60px;
+  }
+  .heading {
+    font-size: 2.5em;
+  }
 }
