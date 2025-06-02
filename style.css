@@ -57,15 +57,15 @@ body {
     list-style: none;
     padding: 0;
     margin: 0;
-    font-size: 1.3em; /* Keeping font size consistent */
+    font-size: 2em;
     color: #333;
-
-    /* --- Multi-column properties --- */
-    column-width: 250px; /* Increased minimum column width to reduce empty space and potentially fewer columns */
-    column-gap: 50px;   /* Increased gap between columns for more breathing room horizontally */
-    text-align: left;   /* Align text to the left within each column */
+    font-family: 'Alumni Sans SC', sans-serif;
+    font-weight: 300; /* Light weight */
+    
+    column-width: 250px;
+    column-gap: 50px;
+    text-align: left;
 }
-
 .list li {
     padding: 6px 0; /* Increased vertical padding for more space between names */
     margin-bottom: 4px; /* Increased margin between list items */
