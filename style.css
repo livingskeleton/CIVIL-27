@@ -5,7 +5,7 @@ body {
   background-color: #f7d7be;
 }
 
-/* Header with logo and centered title */
+/* Header */
 .header {
   display: flex;
   align-items: center;
@@ -30,7 +30,7 @@ body {
   pointer-events: none;
 }
 
-/* Content and scroll */
+/* Content and scrolling area */
 .content {
   display: flex;
   justify-content: center;
@@ -41,29 +41,14 @@ body {
 
 .scroll-container {
   height: 75vh;
-  overflow-y: hidden;
+  overflow-y: auto;
   width: 96%;
   max-width: 1000px;
   margin: auto;
   position: relative;
 }
 
-.scroll-inner {
-  display: flex;
-  flex-direction: column;
-  animation: scroll-up 60s linear forwards;
-}
-
-@keyframes scroll-up {
-  0% {
-    transform: translateY(0%);
-  }
-  100% {
-    transform: translateY(-50%);
-  }
-}
-
-/* The list */
+/* The name list */
 .list {
   list-style: none;
   margin: 0;
@@ -72,7 +57,6 @@ body {
   color: #333;
   font-family: 'Alumni Sans SC', sans-serif;
   font-weight: 300;
-
   column-width: 250px;
   column-gap: 50px;
   text-align: left;
@@ -84,7 +68,7 @@ body {
   break-inside: avoid-column;
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
   .heading {
     font-size: 3em;

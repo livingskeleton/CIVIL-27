@@ -14,75 +14,82 @@
   </div>
 
   <div class="content">
-    <div class="scroll-container">
-      <div class="scroll-inner">
-        <ul class="list">
-          <li>SANIA MIRZA</li>
-          <li>MD.TURJAUN KHAN TURJO</li>
-          <li>MD.SAIM KHAN</li>
-          <li>MOUMITA DAS</li>
-          <li>RIMJHIM SAHA</li>
-          <li>ANISHA ANOWER</li>
-          <li>AKIDA ADNIN</li>
-          <li>JINAT RAHMAN</li>
-          <li>MARIA ISLAM SOHA</li>
-          <li>TANMOY DAKUA</li>
-          <li>FARNAZ RAHMAN MALIHA</li>
-          <li>ADIB MASRUR KHAN</li>
-          <li>SHAH AHMED RUPAM</li>
-          <li>LABEED LOHANI KHAN</li>
-          <li>ABDULLAH AL FAHAT BHUIYA</li>
-          <li>MANTASHA MURSHID</li>
-          <li>TASFIA TABASSUM</li>
-          <li>NAZIFA ZAMAL DIYA</li>
-          <li>ASHFAK ZAMAN</li>
-          <li>TAHMID IBNE HASHEM</li>
-          <li>MD.MUFIDUL ISLAM</li>
-          <li>MARUFA ISLAM SUCHONA</li>
-          <li>SHAKIB AL HASAN</li>
-          <li>MD.SABBIR UDDIN</li>
-          <li>MAHDI FAIYAZ FARAZI</li>
-          <li>MD.ALIF HOSSAIN</li>
-          <li>K.M ZAHINUR RAHMAN</li>
-          <li>HASNAIN AHMED SOUMIC</li>
-          <li>FAHMID HOSSAIN</li>
-          <li>RAMIS JOHRA ISHRA</li>
-          <li>MD.ZEHAD AL SABA</li>
-          <li>MD.SAIDUL ISLAM GIAM</li>
-          <li>NAFIS MAHMUD</li>
-          <li>MD.EMAD UDDIN EMU</li>
-          <li>MD.TAKBIR HOSSAIN</li>
-          <li>MST.TASFIA FAIRUS</li>
-          <li>ISHRAT JAHAN RAISA</li>
-          <li>MD.ASHRAFUL ISLAM SOHAN</li>
-          <li>MD.RIADUZZAMAN MOLLA</li>
-          <li>MD.SAYEED HOSSAIN SHIHAB</li>
-          <li>MD.TOQI TAHMID RAYAT</li>
-          <li>AFRIN JAHAN NADIA</li>
-          <li>SUBORNA RANI ROY</li>
-          <li>MD.ZAKIUL ISLAM AL JAMI</li>
-          <li>IREENA ASHRAF</li>
-          <li>MD.RUBAYET HOSSAIN RIHAM</li>
-          <li>SADIA ISRAT SOBORNA</li>
-          <li>KHANDAKAR MEHEDIN</li>
-          <li>MD.TAIMUL ISLAM TANVIR</li>
-          <li>SHAH MUSHFIQUR RAHMAN</li>
-          <li>TAMANNA ISLAM ANIKA</li>
-          <li>IMTIAZ AHMED EMON</li>
-        </ul>
-      </div>
+    <div class="scroll-container" id="scrollBox">
+      <ul class="list">
+        <li>SANIA MIRZA</li>
+        <li>MD.TURJAUN KHAN TURJO</li>
+        <li>MD.SAIM KHAN</li>
+        <li>MOUMITA DAS</li>
+        <li>RIMJHIM SAHA</li>
+        <li>ANISHA ANOWER</li>
+        <li>AKIDA ADNIN</li>
+        <li>JINAT RAHMAN</li>
+        <li>MARIA ISLAM SOHA</li>
+        <li>TANMOY DAKUA</li>
+        <li>FARNAZ RAHMAN MALIHA</li>
+        <li>ADIB MASRUR KHAN</li>
+        <li>SHAH AHMED RUPAM</li>
+        <li>LABEED LOHANI KHAN</li>
+        <li>ABDULLAH AL FAHAT BHUIYA</li>
+        <li>MANTASHA MURSHID</li>
+        <li>TASFIA TABASSUM</li>
+        <li>NAZIFA ZAMAL DIYA</li>
+        <li>ASHFAK ZAMAN</li>
+        <li>TAHMID IBNE HASHEM</li>
+        <li>MD.MUFIDUL ISLAM</li>
+        <li>MARUFA ISLAM SUCHONA</li>
+        <li>SHAKIB AL HASAN</li>
+        <li>MD.SABBIR UDDIN</li>
+        <li>MAHDI FAIYAZ FARAZI</li>
+        <li>MD.ALIF HOSSAIN</li>
+        <li>K.M ZAHINUR RAHMAN</li>
+        <li>HASNAIN AHMED SOUMIC</li>
+        <li>FAHMID HOSSAIN</li>
+        <li>RAMIS JOHRA ISHRA</li>
+        <li>MD.ZEHAD AL SABA</li>
+        <li>MD.SAIDUL ISLAM GIAM</li>
+        <li>NAFIS MAHMUD</li>
+        <li>MD.EMAD UDDIN EMU</li>
+        <li>MD.TAKBIR HOSSAIN</li>
+        <li>MST.TASFIA FAIRUS</li>
+        <li>ISHRAT JAHAN RAISA</li>
+        <li>MD.ASHRAFUL ISLAM SOHAN</li>
+        <li>MD.RIADUZZAMAN MOLLA</li>
+        <li>MD.SAYEED HOSSAIN SHIHAB</li>
+        <li>MD.TOQI TAHMID RAYAT</li>
+        <li>AFRIN JAHAN NADIA</li>
+        <li>SUBORNA RANI ROY</li>
+        <li>MD.ZAKIUL ISLAM AL JAMI</li>
+        <li>IREENA ASHRAF</li>
+        <li>MD.RUBAYET HOSSAIN RIHAM</li>
+        <li>SADIA ISRAT SOBORNA</li>
+        <li>KHANDAKAR MEHEDIN</li>
+        <li>MD.TAIMUL ISLAM TANVIR</li>
+        <li>SHAH MUSHFIQUR RAHMAN</li>
+        <li>TAMANNA ISLAM ANIKA</li>
+        <li>IMTIAZ AHMED EMON</li>
+      </ul>
     </div>
   </div>
 
-  <!-- JS to stop animation and allow manual scroll -->
+  <!-- JavaScript to scroll once, then allow manual scroll -->
   <script>
-    setTimeout(() => {
-      const container = document.querySelector('.scroll-container');
-      const inner = document.querySelector('.scroll-inner');
+    const container = document.getElementById('scrollBox');
+    const scrollDuration = 60000; // 60 seconds
+    const scrollHeight = container.scrollHeight - container.clientHeight;
+    const startTime = performance.now();
 
-      inner.style.animation = 'none';
-      container.style.overflowY = 'auto';
-    }, 60000); // match animation duration
+    function autoScroll(now) {
+      const elapsed = now - startTime;
+      const progress = Math.min(elapsed / scrollDuration, 1);
+      container.scrollTop = scrollHeight * progress;
+
+      if (progress < 1) {
+        requestAnimationFrame(autoScroll);
+      }
+    }
+
+    requestAnimationFrame(autoScroll);
   </script>
 </body>
 </html>
