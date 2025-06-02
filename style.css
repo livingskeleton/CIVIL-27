@@ -94,6 +94,12 @@ body {
 }
 
 @media (max-width: 480px) {
+    .heading {
+        font-size: 3.2em; /* Make it bigger than default mobile */
+    }
+    .logo {
+        height: 100px; /* Bigger logo for small screens */
+    }
     .list {
         column-count: 1; /* Force single column on very small screens for readability */
         column-width: auto; /* Remove fixed width */
