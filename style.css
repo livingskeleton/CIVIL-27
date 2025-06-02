@@ -5,7 +5,7 @@ body {
   background-color: #f7d7be;
 }
 
-/* Header */
+
 .header {
   display: flex;
   align-items: center;
@@ -30,7 +30,7 @@ body {
   pointer-events: none;
 }
 
-/* Content and scrolling area */
+
 .content {
   display: flex;
   justify-content: center;
@@ -48,7 +48,7 @@ body {
   position: relative;
 }
 
-/* The name list */
+
 .list {
   list-style: none;
   margin: 0;
@@ -68,7 +68,7 @@ body {
   break-inside: avoid-column;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
   .heading {
     font-size: 3em;
