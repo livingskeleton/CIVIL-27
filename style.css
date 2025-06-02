@@ -20,9 +20,15 @@ body {
 }
 
 .heading {
-    font-size: 3em; /* Adjust as needed */
+    font-size: 4em; /* Larger text */
     color: #333;
     margin: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 100%;
+    pointer-events: none; /* So clicks go through it if needed */
 }
 
 .content {
